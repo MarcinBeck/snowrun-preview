@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ski Runner – podgląd</title>
+  <style>html,body{color:#eee;background:#20242c;height:100%;margin:0;font:13px/1.4 system-ui,sans-serif;overflow:hidden}#stage{justify-content:center;align-items:center;display:flex;position:absolute;inset:0}#stage canvas{display:block}#ui{z-index:2;background:#141820cc;border-radius:8px;flex-wrap:wrap;align-items:center;gap:6px;padding:6px 8px;display:flex;position:absolute;top:8px;left:8px}#ui select,#ui button{font:inherit;padding:3px 6px}#info{z-index:2;white-space:pre;background:#141820cc;border-radius:8px;padding:6px 8px;font:12px/1.35 ui-monospace,monospace;position:absolute;bottom:8px;left:8px}body.noui #ui,body.noui #info.scene{display:none}#hud{z-index:2;color:#2d313b;white-space:nowrap;background:#ffffffd9;border-radius:18px;padding:6px 14px;font:600 15px/1.3 system-ui;display:none;position:absolute;top:56px;left:50%;transform:translate(-50%)}#controls{z-index:2;gap:46vmin;display:none;position:absolute;bottom:4%;left:50%;transform:translate(-50%)}#controls button{color:#2d313b;touch-action:manipulation;background:#ffffff8c;border:0;border-radius:50%;width:64px;height:64px;font:700 28px/1 system-ui;box-shadow:0 2px 8px #00000026}#flash{z-index:1;pointer-events:none;opacity:0;background:#e02878;transition:opacity .25s;position:absolute;inset:0}body.run #hud,body.run #controls{display:flex}body.run #info,body.noui #controls{display:none}#panel{z-index:3;background:#141820b8;border-radius:10px;flex-direction:column;gap:6px;padding:8px;font:12px/1.2 system-ui;display:none;position:absolute;top:96px;right:8px}#panel .grp{align-items:center;gap:4px;display:flex}#panel span{color:#cfd6e2;width:46px}#panel button{font:inherit;color:#eef2f8;cursor:pointer;background:#3a4150;border:0;border-radius:6px;padding:5px 8px}#panel button.on{color:#fff;background:#e02878}body.run #panel{display:flex}body.noui #panel,body.hosted #ui{display:none}body.hosted #panel{top:56px}body.hosted #hud{top:12px}</style>
+  <script type="module" crossorigin src="/snowrun-preview/assets/index-Bzm7ktF0.js"></script>
+</head>
+<body>
+  <div id="stage"></div>
+  <div id="ui">
+    <button data-mode="scene">Scena</button>
+    <button data-mode="run">Jazda</button>
+    <button data-mode="inspect">Inspekcja</button>
+    <select id="asset"></select>
+  </div>
+  <div id="info"></div>
+  <div id="hud"></div>
+  <div id="flash"></div>
+  <div id="panel">
+    <div class="grp"><span>Kamera</span><button data-cam="1">1</button><button data-cam="2">2</button><button data-cam="3">3</button></div>
+    <div class="grp"><span>Kąt</span><button data-angle="L">profil L</button><button data-angle="0">tył</button><button data-angle="R">profil P</button></div>
+    <div class="grp"><span>Stok</span><button data-slope="0">gładki</button><button data-slope="1">ślady</button></div>
+  </div>
+</body>
+</html>
